@@ -1,0 +1,24 @@
+:root {
+  --bg-color: rgb(255, 255, 175);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+/* HEADER STYLE HERE*/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
