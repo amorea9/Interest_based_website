@@ -26,6 +26,7 @@ img {
 }
 
 body {
+  margin: 0;
   background-color: var(--bg-color);
 }
 /* HEADER STYLE HERE*/
@@ -46,6 +47,37 @@ body {
   margin: 0;
   border-radius: 50%;
 }
+
+button {
+  padding: 1rem;
+  border-radius: 3rem;
+  background: var(--link-color);
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 var(--primary-font);
+  letter-spacing: 1px;
+  color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0 1rem 0 0; /* 22S - 0 margin-bottom mobile */
+  border: none;
+  transition: all 2s;
+}
+button:hover {
+  background-color: var(--link-hover-color);
+  transform: scale(1.1);
+}
+button:active {
+  background-color: var(--bg-color);
+  border: solid var(--link-color);
+  color: var(--link-color);
+}
+button:focus,
+button:active,
+button:focus-within {
+  outline: 0;
+  border-radius: 3rem;
+}
 .buttons_landing_page {
   display: grid;
   grid-template-columns: 1fr;
@@ -61,6 +93,7 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
+
 /*PRODUCT LIST*/
 /*header*/
 .secondaryHeader {
