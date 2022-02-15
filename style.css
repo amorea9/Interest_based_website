@@ -29,11 +29,15 @@ img {
 body {
   margin: 0;
   background-color: var(--bg-color);
-  margin: 0%;
 }
 /* HEADER STYLE HERE*/
 
 /* LANDING PAGE */
+.texture {
+  background-image: url(/assets/texture.svg);
+  background-size: cover;
+  margin: 0;
+}
 .banner {
   display: grid;
   grid-template-columns: 1fr;
@@ -63,7 +67,7 @@ button {
   cursor: pointer;
   margin: 0 1rem 0 0; /* 22S - 0 margin-bottom mobile */
   border: none;
-  transition: all 2s;
+  transition: all 1.2s;
 }
 button:hover {
   background-color: var(--link-hover-color);
