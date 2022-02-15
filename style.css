@@ -93,14 +93,14 @@ button:focus-within {
   outline: 0;
   border-radius: 3rem;
 }
-<<<<<<< HEAD .buttons_landing_page {
+.buttons_landing_page {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
   grid-gap: 2rem; /* reduce grid gap when desktop view*/
   justify-items: center;
 }
-=======>>>>>>>master a {
+a {
   text-decoration: none;
   font-family: var(--primary-font);
   color: var(--link-color);
