@@ -27,6 +27,7 @@ img {
 
 body {
   background-color: var(--bg-color);
+  margin: 0%;
 }
 /* HEADER STYLE HERE*/
 
@@ -113,3 +114,6 @@ footer p {
 }
 
 /* PRODUCT PAGE - MARIA */
+.product-h1 {
+  text-align: center;
+}
