@@ -38,23 +38,28 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+  padding: var(--white-space);
   display: grid;
-  gap: var(--white-space);
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
+  align-content: center;
 }
 .banner {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
   justify-items: center;
-  grid-gap: 5rem;
+  grid-gap: var(--white-space);
 }
 .logoNegative {
-  width: 22rem;
-  height: 22rem;
+  width: 202rem;
+  height: 20rem;
   margin: 0;
 }
-
+.buttons_landing_page {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--white-space);
+}
 button {
   padding: 1rem;
   border-radius: 3rem;
@@ -66,7 +71,7 @@ button {
   color: white;
   transition: all 0.2s ease;
   cursor: pointer;
-  margin: 0 1rem 0 0; /* 22S - 0 margin-bottom mobile */
+
   border: none;
   transition: all 1.2s;
 }
@@ -94,7 +99,12 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
-
+/*computer screen*/
+@media only screen and (min-width: 600px) {
+  .texture {
+    aspect-ratio: 16/9;
+  }
+}
 /*PRODUCT LIST*/
 /*header*/
 .secondaryHeader {
