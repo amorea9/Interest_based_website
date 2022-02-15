@@ -103,6 +103,12 @@ a:hover {
 
 /*PRODUCT LIST*/
 /*header*/
+
+.logoSmall {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+}
 .secondaryHeader {
   padding: var(--white-space);
   font-family: var(--primary-font);
