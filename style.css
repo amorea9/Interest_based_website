@@ -161,3 +161,8 @@ footer p {
   color: var(--bg-color);
   font-weight: bolder;
 }
+
+/* PRODUCT PAGE - MARIA */
+.product-h1 {
+  text-align: center;
+}
