@@ -107,10 +107,9 @@ a:hover {
   row-gap: var(--white-space);
 }
 .logo {
-  background-color: #f28241;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  width: 3.5rem;
+  width: 5rem;
 }
 .categories {
   justify-self: center;
