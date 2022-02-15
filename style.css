@@ -109,6 +109,10 @@ main {
   text-shadow: -0.3rem 0.2rem var(--link-color);
   text-align: center;
 }
+.product:hover {
+  transform: scale(1.2);
+  transition: 1.2s;
+}
 
 /*footer*/
 footer {
