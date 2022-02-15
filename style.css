@@ -36,7 +36,11 @@ body {
 .texture {
   background-image: url(assets/texture.svg);
   background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
+  display: grid;
+  gap: var(--white-space);
+  aspect-ratio: 16/9;
 }
 .banner {
   display: grid;
@@ -45,13 +49,10 @@ body {
   justify-items: center;
   grid-gap: 5rem;
 }
-.square {
-  border: 1px solid black;
-  background-color: orange;
+.logoNegative {
   width: 22rem;
   height: 22rem;
   margin: 0;
-  border-radius: 50%;
 }
 
 button {
@@ -84,13 +85,7 @@ button:focus-within {
   outline: 0;
   border-radius: 3rem;
 }
-.buttons_landing_page {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr;
-  grid-gap: 2rem;
-  justify-items: center;
-}
+
 a {
   text-decoration: none;
   font-family: var(--primary-font);
