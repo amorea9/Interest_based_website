@@ -90,7 +90,7 @@ a:hover {
 }
 
 /*main*/
-main {
+.productListMain {
   padding: var(--white-space);
 
   background-color: var(--link-hover-color);
@@ -136,7 +136,15 @@ footer p {
     gap: 1rem;
   }
   /*main*/
-  main {
+  .productListMain {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*big computer screen*/
+@media only screen and (min-width: 1000px) {
+  /*main*/
+  .productListMain {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
