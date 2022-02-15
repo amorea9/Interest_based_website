@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?" + id;
+const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion/" + id;
 //API KEY 6208141b34fd621565858416
 const options = {
   headers: {

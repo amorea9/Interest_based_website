@@ -1,7 +1,7 @@
 // const urlParams = new URLSearchParams(window.location.search);
 // const category = urlParams.get("category");
 
-const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?";
+const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?max=6";
 
 //API KEY 6208141b34fd621565858416
 const options = {
