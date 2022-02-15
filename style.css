@@ -38,16 +38,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+  padding: var(--white-space);
   display: grid;
-  gap: var(--white-space);
   aspect-ratio: 9/16;
+  align-content: center;
 }
 .banner {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
   justify-items: center;
-  grid-gap: 5rem;
+  grid-gap: var(--white-space);
 }
 .logoNegative {
   width: 202rem;
@@ -98,7 +99,12 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
-
+/*computer screen*/
+@media only screen and (min-width: 600px) {
+  .texture {
+    aspect-ratio: 16/9;
+  }
+}
 /*PRODUCT LIST*/
 /*header*/
 .secondaryHeader {
