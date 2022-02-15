@@ -40,7 +40,6 @@ body {
   margin: 0;
   display: grid;
   gap: var(--white-space);
-  aspect-ratio: 16/9;
 }
 .banner {
   display: grid;
@@ -93,6 +92,13 @@ a {
 }
 a:hover {
   color: var(--link-hover-color);
+}
+.buttons_landing_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--white-space);
+  align-items: center;
 }
 
 /*PRODUCT LIST*/
@@ -156,30 +162,6 @@ footer p {
   font-weight: bolder;
 }
 
-/*small computer screen*/
-@media only screen and (min-width: 600px) {
-  /*header*/
-  .productHeader {
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-    align-items: center;
-  }
-  .categories {
-    gap: 1rem;
-  }
-  /*main*/
-  .productListMain {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/*big computer screen*/
-@media only screen and (min-width: 1000px) {
-  /*main*/
-  .productListMain {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 /* PRODUCT PAGE - MARIA */
 .product-image-section {
   padding: var(--white-space);
@@ -251,4 +233,42 @@ footer p {
   width: 15%;
   border-radius: 2rem;
   align-self: flex-end;
+}
+
+/* ALL MEDIA QUERIES */
+
+/*big computer screen*/
+@media only screen and (min-width: 1000px) {
+  /*main*/
+  .productListMain {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*small computer screen*/
+@media only screen and (min-width: 600px) {
+  /*header*/
+  .productHeader {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .categories {
+    gap: 1rem;
+  }
+  /*main*/
+  .productListMain {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .texture {
+    aspect-ratio: 16/9;
+  }
+}
+/* 
+500px screens */
+@media only screen and (max-width: 500px) {
+  .buttons_landing_page {
+    flex-direction: column;
+    align-items: center;
+  }
 }
