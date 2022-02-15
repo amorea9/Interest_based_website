@@ -1,65 +1,50 @@
-const urlParams = new URLSearchParams(window.location.search);
-const season = urlParams.get("category");
+// const urlParams = new URLSearchParams(window.location.search);
+// const season = urlParams.get("category");
 
-const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion" + category;
+// const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion/" + category;
 
-//API KEY 6208141b34fd621565858416
-const options = {
-  headers: {
-    "x-apikey": "6208141b34fd621565858416",
-  },
-};
+// //API KEY 6208141b34fd621565858416
+// const options = {
+//   headers: {
+//     "x-apikey": "6208141b34fd621565858416",
+//   },
+// };
 
-fetch(url, options)
-  .then((res) => res.json())
-  .then((data) => handleProductList(data));
+// fetch(url, options)
+//   .then((res) => res.json())
+//   .then((data) => handleProductList(data));
 
-function handleProductList(data) {
-  console.log(data);
-  data.forEach(showProduct);
-}
+// function handleProductList(data) {
+//   console.log(data);
+//   data.forEach(showProduct);
+// }
 
-function showProduct(product) {
-  console.log(product);
+// function showProduct(product) {
+//   console.log(product);
 
-  //grab template
-  const template = document.querySelector("#item_template").content;
+//   //grab template
+//   const template = document.querySelector("template").content;
 
-  //clone it
-  const myClone = template.cloneNode(true);
+//   //clone it
+//   const myClone = template.cloneNode(true);
 
-  //change content
-  myClone
-    .querySelector(".alink")
-    .setAttribute("href", `product.html?id=${product.id}`);
+//   //change content
+//   myClone
+//     .querySelector("a")
+//     .setAttribute("href", `productpage.html?id=${product._id}`);
 
-  myClone.querySelector(".item_name").textContent = product.productdisplayname;
-  myClone.querySelector(".price").textContent = `DKK ${product.price},-`;
-  myClone.querySelector(
-    ".item img"
-  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  myClone.querySelector(".discount").textContent = `-${product.discount}%`;
-  myClone.querySelector(".item img").alt = product.productdisplayname;
+//   myClone.querySelector(".productName").textContent = product.title;
+//   myClone.querySelector(
+//     "img"
+//   ).src = `https://kea22-2fbe.restdb.io/media/b96ec7b43ab0eda93fe41d605b21c50f.jpg`;
 
-  if (product.soldout) {
-    myClone.querySelector(".item").classList.add("item_sold_out"); //change this class to fix opacity
-  }
-  if (product.discount) {
-    myClone.querySelector(".item").classList.add("item_discounted");
-    myClone.querySelector(".price").classList.add("new_price");
-    myClone.querySelector(".new_price").textContent = `DKK ${Math.ceil(
-      product.price - (product.price / 100) * product.discount
-    )},-`;
-    myClone.querySelector(
-      ".old_price"
-    ).textContent = `Was DKK ${product.price},-`;
-  }
+//   //`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
-  //grab parent
+//   //grab parent
 
-  const parent = document.querySelector(".product_list");
+//   const parent = document.querySelector("main");
 
-  //append it
+//   //append it
 
-  parent.appendChild(myClone);
-}
+//   parent.appendChild(myClone);
+// }
