@@ -159,6 +159,74 @@ footer p {
 }
 
 /* PRODUCT PAGE - MARIA */
-.product-h1 {
+.product-image-section {
+  padding: var(--white-space);
+}
+
+.product-text-section {
+  padding: var(--white-space);
+}
+
+.product-page-h1 {
   text-align: center;
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
+  margin: 0%;
+  color: var(--main-text-color);
+}
+
+.product-page-grid {
+  display: grid;
+}
+
+.subHeader {
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
+  color: var(--main-text-color);
+}
+
+.product-page-grid p {
+  font-family: var(--secondary-font);
+  color: var(--main-text-color);
+}
+
+.rating-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-content: center;
+}
+
+.rating-container ul {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+}
+
+.rating-items {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-content: center;
+}
+
+.rating-items div {
+  background-color: var(--link-color);
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+}
+
+.comment-box {
+  background-color: var(--bg-color);
+  padding: var(--white-space);
+  padding-top: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 10px var(--link-color);
+}
+
+.comment-box img {
+  width: 15%;
+  border-radius: 2rem;
+  align-self: flex-end;
 }
