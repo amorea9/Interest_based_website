@@ -9,6 +9,7 @@
   --color-5: #bbbf99;
 
   --primary-font: "KansasNew", serif;
+  --primary-font-weight: bold;
   --secondary-font: "Agenda", sans-serif;
   --main-text-color: #404040;
 
@@ -27,6 +28,7 @@ img {
 
 body {
   background-color: var(--bg-color);
+  margin: 0%;
 }
 /* HEADER STYLE HERE*/
 
@@ -65,6 +67,8 @@ a:hover {
 /*header*/
 .secondaryHeader {
   padding: var(--white-space);
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
 }
 .productHeader {
   display: grid;
@@ -80,12 +84,16 @@ a:hover {
 .categories {
   justify-self: center;
   padding: 0;
+  margin: 0;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*main*/
 main {
   padding: var(--white-space);
+
   background-color: var(--link-hover-color);
   display: grid;
   row-gap: var(--white-space);
@@ -95,6 +103,7 @@ main {
 }
 .productName {
   font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
   font-size: 1.5rem;
   color: #faedb5;
   text-shadow: -0.3rem 0.2rem var(--link-color);
