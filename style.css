@@ -34,7 +34,7 @@ body {
 
 /* LANDING PAGE */
 .texture {
-  background-image: url(/assets/texture.svg);
+  background-image: url(assets/texture.svg);
   background-size: cover;
   margin: 0;
 }
