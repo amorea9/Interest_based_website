@@ -36,7 +36,7 @@ body {
 .texture {
   background-image: url(/assets/texture.svg);
   background-size: cover;
-  margin: 0;
+  margin: 0; /* add aspect ratio 16/9 for desktop*/
 }
 .banner {
   display: grid;
@@ -88,7 +88,7 @@ button:focus-within {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
-  grid-gap: 2rem;
+  grid-gap: 2rem; /* reduce grid gap when desktop view*/
   justify-items: center;
 }
 a {
