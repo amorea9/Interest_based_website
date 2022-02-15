@@ -1,5 +1,13 @@
 :root {
-  --bg-color: rgb(255, 255, 175);
+  --bg-color: #faedb5;
+  --link-color: #f28241;
+  --link-hover-color: #d9bad5;
+  --color-4: #f5a040;
+  --color-5: #bbbf99;
+
+  --primary-font: "KansasNew", serif;
+  --secondary-font: "Agenda", sans-serif;
+  --main-text-color: #404040;
 }
 
 * {
