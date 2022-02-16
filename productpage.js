@@ -1,4 +1,3 @@
-/*
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
@@ -14,6 +13,8 @@ fetch(url, options)
   .then((res) => res.json())
   .then((data) => showProduct(data));
 
+// OLD SHOWPRODUCT CODE - NO TEMPLATE
+/*
 function showProduct(product) {
   console.log(product);
   document.querySelector(".product-page-h1").textContent = product.title;
@@ -25,3 +26,23 @@ function showProduct(product) {
   document.querySelector(".comment-box").textContent = product.userComment;
 }
 */
+
+function showProduct(product) {
+  console.log(product);
+
+  // grab template
+  const template = document.querySelector("template").content;
+  // clone template
+  const myClone = template.cloneNode(true);
+  // change content
+  myClone.querySelector(".product-page-h1").textContent = product.title;
+  myClone.querySelector(
+    ".product-image-section img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  myClone.querySelector(".product-image-section img").alt = product.title;
+  myClone.querySelector(".description-line").textContent = product.description;
+  myClone.querySelector(".comment-box").textContent = product.userComment;
+  // select parent & append
+  const parent = document.querySelector("main");
+  parent.appendChild(myClone);
+}
