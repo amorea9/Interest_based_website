@@ -36,27 +36,27 @@ body {
 .texture {
   background-image: url(assets/texture.svg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
   margin: 0;
   padding: var(--white-space);
   display: grid;
-  aspect-ratio: 9/16;
   align-content: center;
+  height: 100vh;
 }
 .banner {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr;
   justify-items: center;
   grid-gap: var(--white-space);
 }
 .logoNegative {
-  width: 202rem;
+  width: 20rem;
   height: 20rem;
   margin: 0;
 }
 .buttons_landing_page {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   gap: var(--white-space);
 }
@@ -66,10 +66,9 @@ button {
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font: bold 1rem var(--primary-font);
   letter-spacing: 1px;
   color: white;
-  transition: all 0.2s ease;
   cursor: pointer;
 
   border: none;
@@ -84,13 +83,6 @@ button:active {
   border: solid var(--link-color);
   color: var(--link-color);
 }
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 3rem;
-}
-
 a {
   text-decoration: none;
   font-family: var(--primary-font);
@@ -101,10 +93,11 @@ a:hover {
 }
 /*computer screen*/
 @media only screen and (min-width: 600px) {
-  .texture {
-    aspect-ratio: 16/9;
+  .buttons_landing_page {
+    flex-direction: row;
   }
 }
+
 /*PRODUCT LIST*/
 /*header*/
 .secondaryHeader {
