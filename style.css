@@ -38,7 +38,6 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0;
-  padding: var(--white-space);
   display: grid;
   align-content: center;
   height: 100vh;
@@ -46,6 +45,7 @@ body {
 .banner {
   display: grid;
   justify-items: center;
+  width: 100vw;
   grid-gap: var(--white-space);
 }
 .logoNegative {
@@ -60,7 +60,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: var(--white-space);
-  align-items: center;
 }
 button {
   padding: 1rem;
@@ -94,7 +93,7 @@ a:hover {
   color: var(--link-hover-color);
 }
 /*computer screen*/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 300px) {
   .buttons_landing_page {
     flex-direction: row;
   }
