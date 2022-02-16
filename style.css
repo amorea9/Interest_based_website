@@ -108,12 +108,6 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
-/*computer screen*/
-@media only screen and (min-width: 600px) {
-  .texture {
-    aspect-ratio: 16/9;
-  }
-}
 
 /*PRODUCT LIST*/
 /*header*/
@@ -186,6 +180,11 @@ footer p {
   padding: var(--white-space);
 }
 
+.product-image-section img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
 .product-text-section {
   padding: var(--white-space);
 }
@@ -196,10 +195,12 @@ footer p {
   font-weight: var(--primary-font-weight);
   margin: 0%;
   color: var(--main-text-color);
+  padding: var(--white-space);
 }
 
 .product-page-grid {
   display: grid;
+  background-color: var(--link-hover-color);
 }
 
 .subHeader {
@@ -244,27 +245,34 @@ footer p {
   padding-top: 1rem;
   border-radius: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-shadow: 8px 10px var(--link-color);
 }
 
+.comment-box p {
+  margin: 1rem;
+}
+
 .comment-box img {
-  width: 15%;
-  border-radius: 2rem;
+  max-width: 3rem;
+  border-radius: 100%;
   align-self: flex-end;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 /* ALL MEDIA QUERIES */
 
-/*big computer screen*/
-@media only screen and (min-width: 1000px) {
-  /*main*/
-  .productListMain {
-    grid-template-columns: repeat(4, 1fr);
+/*small computer screen*/
+
+/* 500px screens */
+@media only screen and (max-width: 500px) {
+  .buttons_landing_page {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-/*small computer screen*/
 @media only screen and (min-width: 600px) {
   /*header*/
   .productHeader {
@@ -282,12 +290,26 @@ footer p {
   .texture {
     aspect-ratio: 16/9;
   }
+
+  /* PRODUCT PAGE - ML */
+  .product-page-grid {
+    padding: var(--white-space);
+  }
+
+  .product-image-section {
+    padding: var(--white-space);
+  }
 }
-/* 
-500px screens */
-@media only screen and (max-width: 500px) {
-  .buttons_landing_page {
-    flex-direction: column;
-    align-items: center;
+
+/*big computer screen*/
+@media only screen and (min-width: 1000px) {
+  /*main*/
+  .productListMain {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* PRODUCT PAGE - ML */
+  .product-page-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }

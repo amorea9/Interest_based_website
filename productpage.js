@@ -1,3 +1,4 @@
+/*
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
@@ -23,3 +24,4 @@ function showProduct(product) {
   document.querySelector(".description-line").textContent = product.description;
   document.querySelector(".comment-box").textContent = product.userComment;
 }
+*/
