@@ -41,7 +41,7 @@ function showProduct(product) {
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   myClone.querySelector(".product-image-section img").alt = product.title;
   myClone.querySelector(".description-line").textContent = product.description;
-  myClone.querySelector(".comment-box").textContent = product.userComment;
+  myClone.querySelector(".comment-box p").textContent = product.userComment;
   // select parent & append
   const parent = document.querySelector("main");
   parent.appendChild(myClone);
