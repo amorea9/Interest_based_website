@@ -12,6 +12,7 @@
   --primary-font-weight: bold;
   --secondary-font: "Agenda", sans-serif;
   --main-text-color: #404040;
+  --font-size-h: 1.2rem;
 
   --white-space: 2rem;
 }
@@ -131,28 +132,15 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--white-space);
+  color: var(--main-text-color);
+  flex-wrap: wrap;
 }
 
 .category_name {
-  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-h);
 }
 
-.category_description {
-  color: var(--link-color);
-}
-/* .category_name {
-  grid-column: 1 / span 4;
-  grid-row: 1;
-  text-align: center;
-  margin: 0;
-  padding: var(--white-space);
-}
-
-.category_description {
-  grid-column: 1 / span 4;
-  grid-row: 2;
-  text-align: center;
-} */
 .productListMain {
   padding: var(--white-space);
 
@@ -310,6 +298,11 @@ footer p {
 
   .product-image-section {
     padding: var(--white-space);
+  }
+}
+@media only screen and (max-width: 850px) {
+  .category_container {
+    gap: 0;
   }
 }
 
