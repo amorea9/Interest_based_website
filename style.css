@@ -125,6 +125,34 @@ a:hover {
 }
 
 /*main*/
+.category_container {
+  grid-column: 1/ -1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--white-space);
+}
+
+.category_name {
+  color: var(--main-text-color);
+}
+
+.category_description {
+  color: var(--link-color);
+}
+/* .category_name {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  text-align: center;
+  margin: 0;
+  padding: var(--white-space);
+}
+
+.category_description {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+  text-align: center;
+} */
 .productListMain {
   padding: var(--white-space);
 
