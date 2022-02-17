@@ -18,15 +18,24 @@
       </a>
       <nav>
         <ul class="categories">
-          <li><a href="productlist.html?filter=TheGood">The Good</a></li>
-          <li><a href="productlist.html?filter=TheBad">The Bad</a></li>
-          <li><a href="productlist.html?filter=TheUgly">The Ugly</a></li>
+          <li>
+            <a href="productlist.html?category=TheGood">The Good</a>
+          </li>
+          <li><a href="productlist.html?category=TheBad">The Bad</a></li>
+          <li><a href="productlist.html?category=TheUgly">The Ugly</a></li>
         </ul>
       </nav>
     </header>
     <main class="productListMain">
-      <template
-        ><a class="imgLink" href="#"
+      <template>
+        <div class="category_container">
+          <h1 class="category_name"></h1>
+          <p class="category_description">
+            <!-- These shoes represent the worst of the worst in our eyes. Would
+            never wear not even for 128793875dkk. -->
+          </p>
+        </div>
+        <a class="imgLink" href="#"
           ><figure class="product">
             <img
               class="productImage"

@@ -12,6 +12,7 @@
   --primary-font-weight: bold;
   --secondary-font: "Agenda", sans-serif;
   --main-text-color: #404040;
+  --font-size-h: 1.2rem;
 
   --white-space: 2rem;
 }
@@ -33,6 +34,7 @@ body {
 /* HEADER STYLE HERE*/
 
 /* LANDING PAGE */
+
 .texture {
   background-image: url(assets/texture.svg);
   background-size: cover;
@@ -56,8 +58,14 @@ body {
 
 .buttons_landing_page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--white-space);
+}
+.categories_buttons {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   gap: var(--white-space);
 }
@@ -125,6 +133,21 @@ a:hover {
 }
 
 /*main*/
+.category_container {
+  grid-column: 1/ -1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--white-space);
+  color: var(--main-text-color);
+  flex-wrap: wrap;
+}
+
+.category_name {
+  font-family: var(--primary-font);
+  font-size: var(--font-size-h);
+}
+
 .productListMain {
   padding: var(--white-space);
 
@@ -263,6 +286,10 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
+
+  .categories_buttons {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -290,6 +317,11 @@ footer p {
 
   .product-image-section {
     padding: var(--white-space);
+  }
+}
+@media only screen and (max-width: 850px) {
+  .category_container {
+    gap: 0;
   }
 }
 
