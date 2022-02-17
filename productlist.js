@@ -9,10 +9,8 @@ const category = urlParams.get("category");
 
 // https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&filter=TheUgly
 
-const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category";
 const url =
-  "https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&filter=" +
-  category;
+  "https://kea22-2fbe.restdb.io/rest/badfootfashion?filter=" + category;
 
 //API KEY 6208141b34fd621565858416
 const options = {
@@ -49,24 +47,24 @@ function showProduct(product) {
     "img"
   ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
 
-  // category header
-  if (product.category === "TheUgly") {
-    myClone.querySelector(".category_name").textContent = "The Ugly";
-    myClone.querySelector(".category_description").textContent =
-      "You couldn't even pay us to wear this footwear. If you own any of these, shame on you.";
-  }
+  // // category header
+  // if (product.category === "TheUgly") {
+  //   myClone.querySelector(".category_name").textContent = "The Ugly";
+  //   myClone.querySelector(".category_description").textContent =
+  //     "You couldn't even pay us to wear this footwear. If you own any of these, shame on you.";
+  // }
 
-  if (product.category === "TheBad") {
-    myClone.querySelector(".category_name").textContent = "The Bad";
-    myClone.querySelector(".category_description").textContent =
-      "This footwear is terrible, but there are definitely people out there who would wear them.";
-  }
+  // if (product.category === "TheBad") {
+  //   myClone.querySelector(".category_name").textContent = "The Bad";
+  //   myClone.querySelector(".category_description").textContent =
+  //     "This footwear is terrible, but there are definitely people out there who would wear them.";
+  // }
 
-  if (product.category === "TheGood") {
-    myClone.querySelector(".category_name").textContent = "The Good";
-    myClone.querySelector(".category_description").textContent =
-      "The best of the worst. It doesn't get any better than this, unfortunately.";
-  }
+  // if (product.category === "TheGood") {
+  //   myClone.querySelector(".category_name").textContent = "The Good";
+  //   myClone.querySelector(".category_description").textContent =
+  //     "The best of the worst. It doesn't get any better than this, unfortunately.";
+  // }
 
   //grab parent
 
