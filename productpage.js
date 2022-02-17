@@ -39,18 +39,19 @@ function showProduct(product) {
   document.querySelector(".description-line").textContent = product.description;
   document.querySelector(".comment-box p").textContent = product.userComment;
 
-  // ratings (except it's not working and i'm tiredddd)
-  let comfortRating = product.comfort;
-  if (comfortRating >= 1) {
-    document.querySelector(".rating-1").classList.add(".ratingActive");
-  }
-
-  // select parent & append
-  const parent = document.querySelector("main");
-  parent.appendChild(myClone);
-
   // change meta title
   document.querySelector(
     "head title"
   ).textContent = `Bad Foot Fashion | ${product.title}`;
+
+  showRating();
+}
+
+function showRating(product) {
+  // ratings (except it's not working and i'm tiredddd)
+  console.log(product.comfort);
+  const comfortRating = product.comfort;
+  if (comfortRating === "5") {
+    document.querySelector(".rating-1").classList.add(".ratingActive");
+  }
 }
