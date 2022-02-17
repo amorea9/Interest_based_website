@@ -44,14 +44,20 @@ function showProduct(product) {
     "head title"
   ).textContent = `Bad Foot Fashion | ${product.title}`;
 
-  showRating();
-}
-
-function showRating(product) {
-  // ratings (except it's not working and i'm tiredddd)
   console.log(product.comfort);
   const comfortRating = product.comfort;
-  if (comfortRating === "5") {
+  if (comfortRating === "4") {
     document.querySelector(".rating-1").classList.add(".ratingActive");
   }
+
+  // showRating();
 }
+
+// function showRating(product) {
+//   // ratings (except it's not working and i'm tiredddd)
+//   console.log(product.comfort);
+//   const comfortRating = product.comfort;
+//   if (comfortRating === "5") {
+//     document.querySelector(".rating-1").classList.add(".ratingActive");
+//   }
+// }
