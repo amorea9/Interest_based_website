@@ -30,19 +30,75 @@ function showProduct(product) {
 function showProduct(product) {
   console.log(product);
 
-  // grab template
-  const template = document.querySelector("template").content;
-  // clone template
-  const myClone = template.cloneNode(true);
   // change content
-  myClone.querySelector(".product-page-h1").textContent = product.title;
-  myClone.querySelector(
+  document.querySelector(".product-page-h1").textContent = product.title;
+  document.querySelector(
     ".product-image-section img"
   ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
-  myClone.querySelector(".product-image-section img").alt = product.title;
-  myClone.querySelector(".description-line").textContent = product.description;
-  myClone.querySelector(".comment-box p").textContent = product.userComment;
-  // select parent & append
-  const parent = document.querySelector("main");
-  parent.appendChild(myClone);
+  document.querySelector(".product-image-section img").alt = product.title;
+  document.querySelector(".description-line").textContent = product.description;
+  document.querySelector(".comment-box p").textContent = product.userComment;
+
+  // change meta title
+  document.querySelector(
+    "head title"
+  ).textContent = `Bad Foot Fashion | ${product.title}`;
+
+  // ratings - comfort
+  console.log(`comfort = ${product.comfort}`);
+  const comfortRating = product.comfort;
+  if (comfortRating >= "1") {
+    document
+      .querySelector(".comfortRatings .rating-1")
+      .classList.add("ratingActive");
+  }
+  if (comfortRating >= "2") {
+    document
+      .querySelector(".comfortRatings .rating-2")
+      .classList.add("ratingActive");
+  }
+  if (comfortRating >= "3") {
+    document
+      .querySelector(".comfortRatings .rating-3")
+      .classList.add("ratingActive");
+  }
+  if (comfortRating >= "4") {
+    document
+      .querySelector(".comfortRatings .rating-4")
+      .classList.add("ratingActive");
+  }
+  if (comfortRating >= "5") {
+    document
+      .querySelector(".comfortRatings .rating-5")
+      .classList.add("ratingActive");
+  }
+
+  // ratings - ugliness
+  console.log(`ugliness = ${product.ugliness}`);
+  const uglinessRating = product.ugliness;
+  if (uglinessRating >= "1") {
+    document
+      .querySelector(".uglinessRatings .rating-1")
+      .classList.add("ratingActive");
+  }
+  if (uglinessRating >= "2") {
+    document
+      .querySelector(".uglinessRatings .rating-2")
+      .classList.add("ratingActive");
+  }
+  if (uglinessRating >= "3") {
+    document
+      .querySelector(".uglinessRatings .rating-3")
+      .classList.add("ratingActive");
+  }
+  if (uglinessRating >= "4") {
+    document
+      .querySelector(".uglinessRatings .rating-4")
+      .classList.add("ratingActive");
+  }
+  if (uglinessRating >= "5") {
+    document
+      .querySelector(".uglinessRatings .rating-5")
+      .classList.add("ratingActive");
+  }
 }
