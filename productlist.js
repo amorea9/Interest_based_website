@@ -45,6 +45,11 @@ function showProduct(product) {
     "img"
   ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
 
+  // change meta title
+  document.querySelector(
+    "head title"
+  ).textContent = `Bad Foot Fashion | ${product.category}`;
+
   // category header
   if (product.category === "TheUgly") {
     myClone.querySelector(".category_name").textContent = "The Ugly";
