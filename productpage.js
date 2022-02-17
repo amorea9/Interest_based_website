@@ -30,19 +30,27 @@ function showProduct(product) {
 function showProduct(product) {
   console.log(product);
 
-  // grab template
-  const template = document.querySelector("template").content;
-  // clone template
-  const myClone = template.cloneNode(true);
   // change content
-  myClone.querySelector(".product-page-h1").textContent = product.title;
-  myClone.querySelector(
+  document.querySelector(".product-page-h1").textContent = product.title;
+  document.querySelector(
     ".product-image-section img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  myClone.querySelector(".product-image-section img").alt = product.title;
-  myClone.querySelector(".description-line").textContent = product.description;
-  myClone.querySelector(".comment-box").textContent = product.userComment;
+  document.querySelector(".product-image-section img").alt = product.title;
+  document.querySelector(".description-line").textContent = product.description;
+  document.querySelector(".comment-box p").textContent = product.userComment;
+
+  // ratings (except it's not working and i'm tiredddd)
+  let comfortRating = product.comfort;
+  if (comfortRating >= 1) {
+    document.querySelector(".rating-1").classList.add(".ratingActive");
+  }
+
   // select parent & append
   const parent = document.querySelector("main");
   parent.appendChild(myClone);
+
+  // change meta title
+  document.querySelector(
+    "head title"
+  ).textContent = `Bad Foot Fashion | ${product.title}`;
 }

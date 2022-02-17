@@ -239,6 +239,14 @@ footer p {
   border-radius: 1rem;
 }
 
+.ratingActive {
+  /* background-image: url(assets/rating-icon_orange.svg);
+  width: 3.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 1rem; */
+  background-color: var(--link-color);
+}
+
 .comment-box {
   background-color: var(--bg-color);
   padding: var(--white-space);
