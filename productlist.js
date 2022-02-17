@@ -1,13 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
-// THIS WORKS - ALL CATEGORIES
-// https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category
+// put this link in landing page
+// productlist.html?category=TheGood
 
-// THESE WORK - SPECIFIC CATEGORIES
-// https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&q={%22category%22:%22TheBad%22}
-
-// https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&filter=TheUgly
+// THIS IS THE OLD WRONG LINK (BAD LINK, DONT TOUCH)
+// const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category";
 
 const url =
   "https://kea22-2fbe.restdb.io/rest/badfootfashion?filter=" + category;
