@@ -10,6 +10,9 @@ const category = urlParams.get("category");
 // https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&filter=TheUgly
 
 const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category";
+const url =
+  "https://kea22-2fbe.restdb.io/rest/badfootfashion?groupby=category&filter=" +
+  category;
 
 //API KEY 6208141b34fd621565858416
 const options = {
