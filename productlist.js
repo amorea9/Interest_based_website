@@ -38,6 +38,25 @@ function showProduct(product) {
     "img"
   ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
 
+  // category header
+  if (product.category === "TheUgly") {
+    myClone.querySelector(".category_name").textContent = "The Ugly";
+    myClone.querySelector(".category_description").textContent =
+      "You couldn't even pay us to wear this footwear. If you own any of these, shame on you.";
+  }
+
+  if (product.category === "TheBad") {
+    myClone.querySelector(".category_name").textContent = "The Bad";
+    myClone.querySelector(".category_description").textContent =
+      "This footwear is terrible, but there are definitely people out there who would wear them.";
+  }
+
+  if (product.category === "TheGood") {
+    myClone.querySelector(".category_name").textContent = "The Good";
+    myClone.querySelector(".category_description").textContent =
+      "The best of the worst. It doesn't get any better than this, unfortunately.";
+  }
+
   //grab parent
 
   const parent = document.querySelector("main");
