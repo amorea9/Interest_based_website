@@ -38,7 +38,7 @@ function showProduct(product) {
   myClone.querySelector(".product-page-h1").textContent = product.title;
   myClone.querySelector(
     ".product-image-section img"
-  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
   myClone.querySelector(".product-image-section img").alt = product.title;
   myClone.querySelector(".description-line").textContent = product.description;
   myClone.querySelector(".comment-box p").textContent = product.userComment;

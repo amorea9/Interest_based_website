@@ -1,7 +1,7 @@
 // const urlParams = new URLSearchParams(window.location.search);
 // const category = urlParams.get("category");
 
-const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?max=6";
+const url = "https://kea22-2fbe.restdb.io/rest/badfootfashion?category=";
 
 //API KEY 6208141b34fd621565858416
 const options = {
@@ -36,9 +36,7 @@ function showProduct(product) {
   myClone.querySelector(".productName").textContent = product.title;
   myClone.querySelector(
     "img"
-  ).src = `https://kea22-2fbe.restdb.io/media/b96ec7b43ab0eda93fe41d605b21c50f.jpg`;
-
-  //`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  ).src = `https://carolinethostrup.dk/BFF/assets/${product.image}`;
 
   //grab parent
 
