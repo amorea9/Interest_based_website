@@ -185,6 +185,8 @@ footer p {
 /* PRODUCT PAGE - MARIA */
 .product-image-section {
   padding: var(--white-space);
+  display: flex;
+  justify-content: center;
 }
 
 .product-image-section img {
@@ -239,19 +241,21 @@ footer p {
   align-content: center;
 }
 
-.rating-items div {
+.rating-1,
+.rating-2,
+.rating-3,
+.rating-4,
+.rating-5 {
   background-image: url(assets/rating-icon_white.svg);
   width: 3.5rem;
   aspect-ratio: 1/1;
   border-radius: 1rem;
+  border-radius: 100%;
 }
 
 .ratingActive {
-  /* background-image: url(assets/rating-icon_orange.svg);
-  width: 3.5rem;
-  aspect-ratio: 1/1;
-  border-radius: 1rem; */
-  background-color: var(--link-color);
+  background-image: url(assets/rating-icon_orange.svg);
+  display: block;
 }
 
 .comment-box {
@@ -262,6 +266,7 @@ footer p {
   display: flex;
   flex-direction: row;
   box-shadow: 8px 10px var(--link-color);
+  justify-content: space-between;
 }
 
 .comment-box p {
